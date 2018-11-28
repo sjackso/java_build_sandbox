@@ -1,0 +1,8 @@
+# Muse configuration file
+
+setup = "setup.sh"
+#problrems = 1
+vverifiers = [ "errorprone" ]
+# build = "./gradlew"
+#arguments = [ "hello" ]
+
