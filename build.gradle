@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'io.musedev.mvn-test'
+version = '1.0-SNAPSHOT'
+
+description = """mvn-test"""
+
+sourceCompatibility = 8
+targetCompatibility = 8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+buildscript{
+  repositories {
+    repositories {
+        // For license plugin.
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+  }
+  dependencies {
+    classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.16"
+  }
+}
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'3.8.1'
+}
+
+apply from: file("gradle/errorprone.gradle")
+
+task hello {
+  doLast {
+    println 'Hello world!'
+  }
+}
