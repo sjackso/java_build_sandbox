@@ -11,6 +11,10 @@ public class App
         new Exception();
     }
 
+    public static void exceptionInstatiator2(){
+        new Exception("Oh noes");
+    }
+
     public int downcastProblems( double x ) {
         return Math.round( (int)(x) );
     }
