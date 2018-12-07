@@ -8,7 +8,7 @@ public class App
 {
 
     public static void exceptionInstatiator(){
-        new Exception();
+        new Exception()
     }
 
     public static void exceptionInstatiator2(){
